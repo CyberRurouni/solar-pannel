@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SolarNova - Your Renewable Energy Partner</title>
+    <meta name="description" content="Get in touch with SolarNova for all your solar energy needs. We're here to answer your questions and provide innovative renewable energy solutions.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">
+                <img src="/api/placeholder/150/50" alt="SolarNova Logo" width="150" height="50">
+            </div>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+                <span class="sr-only">Toggle menu</span>
+                <span class="hamburger"></span>
+            </button>
+            <ul id="main-menu" class="nav-links">
+                <li><a href="/Solar Pannels/Home/index.html">Home</a></li>
+                <li><a href="/Solar Pannels/About/index.html">About</a></li>
+                <li><a href="/Solar Pannels/Services/index.html">Services</a></li>
+                <li><a href="#contact" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-banner" aria-labelledby="hero-heading">
+            <div class="container">
+                <h1 id="hero-heading" class="animate-on-scroll">Powering Your Future with Solar Innovation</h1>
+                <p class="animate-on-scroll">Connect with SolarNova and embark on your journey towards sustainable energy. Our team of experts is ready to illuminate your path to a greener tomorrow.</p>
+                <a href="#contact-form" class="cta-button animate-on-scroll">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/800/600" alt="Solar panels on a modern home" width="800" height="600" loading="lazy">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <div class="container">
+                <h2 id="contact-heading" class="section-heading animate-on-scroll">Let's Brighten Your Future Together</h2>
+                <div class="contact-grid">
+                    <form id="contact-form" class="contact-form animate-on-scroll" aria-labelledby="form-heading">
+                        <h3 id="form-heading">Send Us a Message</h3>
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="sr-only">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="sr-only">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a Subject</option>
+                                <option value="quote">Request a Quote</option>
+                                <option value="info">General Information</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="contact-info animate-on-scroll">
+                        <h3>Our Contact Information</h3>
+                        <address>
+                            <p><strong>SolarNova Headquarters</strong></p>
+                            <p>123 Sunshine Boulevard</p>
+                            <p>Green City, EC 12345</p>
+                            <p>United States</p>
+                        </address>
+                        <ul class="contact-details">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <a href="mailto:info@solarnova.com">info@solarnova.com</a>
+                            </li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section" aria-labelledby="map-heading">
+            <div class="container">
+                <h2 id="map-heading" class="section-heading animate-on-scroll">Find Us Here</h2>
+                <div class="map-container animate-on-scroll">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0859455567326!2d-122.41941608468161!3d37.77492927975914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7deadd77%3A0x40bfb295b7b26f0!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1609455686721!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading" class="animate-on-scroll">Ready to Harness the Power of the Sun?</h2>
+                <p class="animate-on-scroll">Join thousands of satisfied customers who have made the switch to clean, renewable energy. Contact us today and take the first step towards a brighter, more sustainable future.</p>
+                <a href="#contact-form" class="cta-button animate-on-scroll">Get Started Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="/api/placeholder/150/50" alt="SolarNova Logo" width="150" height="50" class="footer-logo">
+                    <p>Empowering homes and businesses with innovative solar solutions since 2010.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <address>
+                        <p>123 Sunshine Boulevard</p>
+                        <p>Green City, EC 12345</p>
+                        <p>United States</p>
+                    </address>
+                    <p>Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                    <p>Email: <a href="mailto:info@solarnova.com">info@solarnova.com</a></p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for the latest solar news and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" placeholder="Your Email Address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SolarNova. All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#sitemap">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

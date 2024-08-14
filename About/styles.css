@@ -1,0 +1,485 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  transform: translateX(-200px);
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.hero .cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.hero .cta-button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.leaf {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("Pics/pngwing.com.png");
+  background-size: cover;
+}
+
+/* About */
+/* Section Base Styles */
+ #about {
+  padding: 50px 0;
+  background-color: #0a192f;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.scroll-container {
+  width: 400px;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.scroll {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 10px;
+  background-color: #64ffda;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 1s ease-out;
+}
+
+.scroll::before,
+.scroll::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  background-color: #1bc9a0;
+  border-radius: 10px;
+}
+
+.scroll::before {
+  left: 0;
+}
+.scroll::after {
+  right: 0;
+}
+
+.page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 0;
+  border: 1px solid #64ffda;
+  background-color: #0d253f;
+  border-radius: 10px;
+  transition: all 1s ease-out;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  width: 80%;
+  height: 80%;
+  color: var(--bg-color);
+}
+
+#about h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Content Area Styles */
+.mission-content,
+.vision-content,
+.story-content {
+  margin: 40px auto;
+  max-width: 1200px;
+  height: 80vh;
+  padding: 20px;
+  color: #f0e6d2; /* Light text color */
+  background: linear-gradient(
+    135deg,
+    rgba(30, 42, 56, 0.8),
+    rgba(46, 61, 78, 0.8)
+  ); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Adding a skewed effect for the background */
+.mission-content::before,
+.vision-content::before,
+.story-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: inherit;
+  transform: skewY(-6deg);
+  z-index: -1;
+}
+
+/* Image Styling */
+.mission-content img,
+.vision-content img,
+.story-content img {
+  width: 80%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Unique hover effect for the image */
+.mission-content img:hover,
+.vision-content img:hover,
+.story-content img:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.3) contrast(1.2);
+}
+
+/* Text Content Styling */
+.mission-content .text,
+.vision-content .text,
+.story-content .text {
+  width: 45%;
+}
+
+.mission-content p,
+.vision-content p,
+.story-content p {
+  /* margin-bottom: 20px; */
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+
+/* Team */
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  perspective: 1000px;
+}
+
+.team .container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  perspective: 1000px;
+  height: 450px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.team-member.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.team-member:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card-front {
+  background: #0d253f;
+}
+
+.card-front::before,
+.card-back::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.team-member:hover .card-front::before,
+.team-member:hover .card-back::before {
+  opacity: 1;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #0a192f;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  border: 5px solid var(--secondary-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+  border-color: #ffffff;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.card-back h3 {
+  color: var(--secondary-color);
+}
+
+.card-back p {
+  color: #00bfff;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* Initial Animations */
+.team-member {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: calc(var(--index) * 0.5s);
+}
+
+.team-member.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations */
+
+/* Leaf Animation */
+@keyframes leafFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+.leaf {
+  transform: translateY(-100vh);
+  animation: leafFall linear infinite;
+}
+
+/* Fade In Left Animation */
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hero h1 {
+  transform: translateX(-200px);
+  opacity: 0;
+  animation: fadeInLeft 1.2s ease forwards;
+}
+.team h2 {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.team.animate h2 {
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero p {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards 0.6s;
+}
+.hero .cta-button {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards 1s;
+}
+
+.mission-content p,
+.vision-content p,
+.story-content p {
+  opacity: 0;
+}
+.mission-content.animate p,
+.vision-content.animate p,
+.story-content.animate p {
+  animation: fadeInUp 1.2s ease forwards 1.4s;
+}
+
+/* Flip Animation */
+
+@keyframes initialFlip {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+.reveal .card-inner {
+  animation: initialFlip 2.5s forwards;
+}
